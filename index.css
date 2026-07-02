@@ -1,11 +1,14 @@
 @import url('https://api.fonts.coollabs.io/css2?family=Modak&display=swap');
 :root {
-    --primary: #61005d;
-    --secondary: #320030;
+    --primary: #a55ab4;
+    --secondary: #1e00324b;
     --terinary: #bf61bc;
-    --bg: #11000f;
+    --bg: #080011;
     --text: #eeeeee;
     --footer: #61005d33;
+    --border-col: #eeeeee33;
+    --link-visited: #c363ff;
+    --link: #c0f;
 }
 html,body {
     background-color: var(--bg);
@@ -20,7 +23,7 @@ html,body {
 
 }
 body {
-    /* background-image: url(https://images.unsplash.com/photo-1617493388771-1c38b0af33d3); */
+    background-image: url(/imgs/tex.png);
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -29,7 +32,7 @@ body {
     max-width: 65%;
     width: fit-content;
     margin: 0;
-    /* background: #672; */
+    line-height: 23pt;
 }
 @media (max-width: 1000px) {
     #main-cont {
@@ -62,22 +65,57 @@ body {
 }
 #my-name {
     font-size: 60pt;
+    color: var(--primary);
 }
+::selection {
+    background: var(--primary);
+    color: var(--text);
+}
+::selection a:link {
+    color: var(--bg); /*idk why this dont work*/
+}
+
+
+/* bullshit that doesn't work */
+/* #name-wrap {
+    --_space: ;
+  background-image: linear-gradient(
+    225deg var(--_space),
+    #f07 0%,
+    #c0f 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@supports (background-image: linear-gradient(in oklch, #000, #fff)) {
+  #name-wrap {
+    --_space: in oklch;
+  }
+} */
+
+
 #main-desc {
     padding: 1em;
     width: fit-content;
     /* max-width: 85%; */
-    background-color: var(--secondary); /* TEMP */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary);
     border-radius: 10px;
     text-align: left;
     font-size: 14pt;
+    border: var(--border-col) 1px solid;
+}
+.font-sans {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 a {
-    color: var(--terinary);
+    color: var(--link);
 }
 a:visited {
-    color: var(--primary);
+    color: var(--link-visited);
 }
 #links {
     padding-bottom: 30px;
@@ -88,6 +126,4 @@ a:visited {
     bottom: 5px;
     left: 0px;
     font-size: 10pt;
-    /* text-align: center; */
-    /* background-color: var(--footer); */
 }
