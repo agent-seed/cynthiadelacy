@@ -57,6 +57,9 @@ body {
     #my-name, #links, #footer {
         text-align: center;
     }
+    #my-name {
+        line-height: 42pt;
+    }
 }
 .font-display {
     font-family: "Modak", system-ui;
