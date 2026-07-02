@@ -1,0 +1,93 @@
+@import url('https://api.fonts.coollabs.io/css2?family=Modak&display=swap');
+:root {
+    --primary: #61005d;
+    --secondary: #320030;
+    --terinary: #bf61bc;
+    --bg: #11000f;
+    --text: #eeeeee;
+    --footer: #61005d33;
+}
+html,body {
+    background-color: var(--bg);
+    color: var(--text);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+body {
+    /* background-image: url(https://images.unsplash.com/photo-1617493388771-1c38b0af33d3); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+#main-cont {
+    max-width: 65%;
+    width: fit-content;
+    margin: 0;
+    /* background: #672; */
+}
+@media (max-width: 1000px) {
+    #main-cont {
+        max-width: 75%;
+    }
+    #my-name, #links, #footer {
+        text-align: left;
+    }
+}
+@media (max-width: 800px) {
+    #main-cont {
+        max-width: 95%;
+    }
+    #my-name, #links, #footer {
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    #main-cont {
+        max-width: 98%;
+    }
+    #my-name, #links, #footer {
+        text-align: center;
+    }
+}
+.font-display {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+#my-name {
+    font-size: 60pt;
+}
+#main-desc {
+    padding: 1em;
+    width: fit-content;
+    /* max-width: 85%; */
+    background-color: var(--secondary); /* TEMP */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14pt;
+}
+a {
+    color: var(--terinary);
+}
+a:visited {
+    color: var(--primary);
+}
+#links {
+    padding-bottom: 30px;
+}
+#footer {
+    width: 100%;
+    position: static;
+    bottom: 5px;
+    left: 0px;
+    font-size: 10pt;
+    /* text-align: center; */
+    /* background-color: var(--footer); */
+}
